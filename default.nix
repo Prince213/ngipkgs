@@ -140,6 +140,7 @@ rec {
       }
       # TODO: needed for examples that use sops (like Pretalx)
       sops-nix
+      ./overview/demo/shell.nix
     ]
     ++ ngipkgsModules
     ++ nixosModules;
@@ -161,7 +162,6 @@ rec {
 
         system.stateVersion = "23.05";
       }
-      ./overview/demo/shell.nix
       raw-projects # for checks
     ] ++ extendedNixosModules;
     specialArgs = {
